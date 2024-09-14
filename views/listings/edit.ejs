@@ -1,0 +1,69 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <h2>Edit Listing</h2>
+            <form action="/listings/<%= listing._id %>?_method=PUT" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+            
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" placeholder="title" name="listing[title]" value="<%= listing.title %>" class="form-control" required>  
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Title should be valid</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea type="text" placeholder="description" name="listing[description]" value="<%= listing.description %>" class="form-control" required><%= listing.description %></textarea>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please enter a short description</div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input type="file" name="listing[image.url]" value="<%= listing.image.url %>" class="form-control" >
+                </div>
+
+                <div class="mb-3">
+                    <label for="category" class="form-label">Catagory:</label>
+                    <select name="listing[category]" id="category" class="form-select">
+                        <option value="trending">Trending</option>
+                        <option value="rooms">Rooms</option>
+                        <option value="lakefront">Lakefront</option>
+                        <option value="beachfront">Beachfront</option>
+                        <option value="arctic">Arctic</option>
+                        <option value="tropical">Tropical</option>
+                        <option value="beach">Beach</option>
+                        <option value="amazingpools">Amazing pools</option>
+                        <option value="farms">Farms</option>
+                        <option value="boats">Boats</option>
+                    
+                    </select>
+                </div>
+                
+                <div class="row">
+                    <div class="mb-3 col-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="number" placeholder="price" name="listing[price]" value="<%= listing.price %>" class="form-control" required>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Price should be valid</div>
+                    </div>
+                    <div class="mb-3 col-8">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" placeholder="country" name="listing[country]" value="<%= listing.country %>" class="form-control" required>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Country should be valid</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" placeholder="location" name="listing[location]" value="<%= listing.location %>" class="form-control" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Location should be valid</div>
+                </div>
+                
+                <button class="btn btn-dark add-btn mb-3">Save</button>
+                
+            </form>
+        </div>
+    </div>
+</body>

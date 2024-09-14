@@ -1,0 +1,106 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+
+
+    <div id="nav-container">
+        <div id="filters">
+            <a href="/listings/category/trending">
+                <div class="filter">
+                    <i class="fa-solid fa-fire"></i>
+                    <p class="para">Trending</p>
+                </div>
+            </a>
+            <a href="/listings/category/rooms">
+                <div class="filter">
+                    <i class="fa-solid fa-bed"></i>
+                    <p>Rooms</p>
+                </div>
+            </a>
+            <a href="/listings/category/lakefront">
+                <div class="filter">
+                    <i class="fa-solid fa-water"></i>
+                    <p>Lakefront</p>
+                </div>
+            </a>
+            
+            <a href="/listings/category/beachfront">
+                <div class="filter">
+                    <i class="fa-solid fa-umbrella-beach"></i>
+                    <p>Beachfront</p>
+                </div>
+            </a>
+           
+            <a href="/listings/category/arctic">
+                <div class="filter">
+                    <i class="fa-regular fa-snowflake"></i>
+                    <p>Arctic</p>
+                </div>
+            </a>
+            
+            <a href="/listings/category/tropical">
+                <div class="filter">
+                    <i class="fa-solid fa-tree"></i>
+                    <p>Tropical</p>
+                </div>
+            </a>
+            
+            <a href="/listings/category/beach">
+                <div class="filter">
+                    <i class="fa-solid fa-umbrella"></i>
+                    <p>Beach</p>
+                </div>
+            </a>
+            
+            <a href="/listings/category/amazingpools">
+                <div class="filter">
+                    <i class="fa-solid fa-person-swimming"></i>
+                    <p>Amazing pools</p>
+                </div>
+            </a>
+            
+            <a href="/listings/category/farms">
+                <div class="filter">
+                    <i class="fa-solid fa-wheat-awn"></i>
+                    <p>Farms</p>
+                </div>
+            </a>
+           
+            <a href="/listings/category/boats">
+                <div class="filter">
+                    <i class="fa-solid fa-sailboat"></i>
+                    <p>Boats</p>
+                </div>
+            </a>
+            
+        </div>
+
+        <div class="tax-toggle">
+            <div class="form-check form-switch form-check-reverse">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Display total before taxes</label>
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 ms-auto mt-3">
+        <% for(let listing of allListings){ %>
+            <a href="/listings/<%= listing._id %>" class="listing-link">
+                <div class="card listing-card" >  
+                    <img src="<%=listing.image.url%>" alt="Listing_image" class="card-img-top" style="height: 20rem;">
+                    <div class="card-img-overlay"></div>
+                    <div class="card-body">
+                        <p class="card-text"> 
+                            <b><%= listing.title %></b> <br>
+                            &#36;<%= listing.price.toLocaleString("en-BD") %> / night
+                            <ins class="tax-info">+ 10% GST</ins>
+                        </p>
+                    </div>
+                </div>
+            </a>
+        <%}%>
+    </div>
+       
+</body>
+
+
+

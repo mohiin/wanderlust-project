@@ -1,0 +1,202 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important ;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+/*Navbar*/
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.navbar-brand{
+    color: #fe424d !important;
+    font-size: 1.5rem !important;
+    font-weight: 700;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+/* Filter  nav*/
+
+ #filters, #nav-container{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color:#fff;
+    position:sticky;
+    top: 80px;
+    z-index: 2;        
+}
+#nav-container{
+    justify-content:space-between;
+}
+#filters a{
+    color:#000;
+    text-decoration: none;
+}
+.filter{
+    text-align: center;
+    padding:0.5rem 1rem;
+    opacity: 0.7;
+}
+.filter p, label{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.filter:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.tax-toggle{    
+    border-radius: 5px;
+    padding:0.5rem 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    
+}
+.tax-info{
+    display: none;
+}
+
+
+/*Footer*/
+
+.f-info{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ebebeb;
+    padding: 1.2rem 4rem;
+   
+}
+
+.f-info-links{
+    display: flex;
+}
+
+
+.f-info-links p{
+    margin: 0;
+}
+
+.f-info-links span{
+   width: 20px;
+   text-align: center;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color:#222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-socials span{
+    font-weight: 600;
+    font-size: 1rem;
+    margin-right: 0.8rem;
+}
+
+.f-info-socials span i{
+    margin-right: 0.2rem;
+}
+
+.f-info-socials a{
+    margin-right: 0.5rem;
+    color: #222222;
+}
+.f-info-socials a i{
+    font-size: 1.4rem;
+}
+
+/** Card **/
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+.card-body p{
+    font-weight: 400 !important ;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+/* Card Effect */
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* Add button */
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Edit page */
+
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Show page */
+
+.show-img{
+    height: 30vh;
+}
+
+.btns{
+    display: flex;
+}
+
+/* Search */
+.search{
+    display: flex;
+    padding: 0.5rem 3rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.search .circle{
+    background-color:#fe424d ;
+    color:#fff;
+    border:none;
+    border-radius: 100%;
+}
+
+.search .circle:hover{
+    background-color:#fe424d ;
+    color:#fff;
+    border:none;
+    border-radius: 100%;
+}
+
+.d-flex .search-inp{
+    border-radius: 50px;
+    padding: 0 2rem;
+}
