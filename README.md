@@ -32,24 +32,24 @@ To run this project locally, follow these steps:
    npm install
 
 5. Set up your MongoDB database:
-   Create a MongoDB database and update the connection string in your .env file.
+   - Create a MongoDB database and update the connection string in your .env file.
 5. Start the application:
    ```bash
    nodemon app.js
 6. Open your browser and go to http://localhost:8080 to view the application.
 
-Usage
-   Register or log in to your account.
-   Navigate to the "Add House" page to create new listings.
-   Use the "Edit" button to update house details.
-   Delete any listing you no longer want to keep.
+## Usage
+   - Register or log in to your account.
+   - Navigate to the "Add House" page to create new listings.
+   - Use the "Edit" button to update house details.
+   - Delete any listing you no longer want to keep.
    
-Contributing
-   Contributions are welcome! If you'd like to contribute, please fork the repository and create a pull request.
+## Contributing
+   - Contributions are welcome! If you'd like to contribute, please fork the repository and create a pull request.
 
-Acknowledgements
-   Inspired by Airbnb for educational purposes.
-   Thanks to the open-source community for valuable resources and libraries.
+## Acknowledgements
+   - Inspired by Airbnb for educational purposes.
+   - Thanks to the open-source community for valuable resources and libraries.
 
 
 
