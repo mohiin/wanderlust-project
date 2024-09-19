@@ -3,7 +3,7 @@
 A simple Airbnb-like web application built using Node.js, Express.js, MongoDB, and EJS. This project allows users to manage listings, including adding, editing, and deleting house details.
 
 ## Live Demo
-   https://wanderlust-project-gnvf.onrender.com/listings
+  [Wanderlust](https://wanderlust-project-gnvf.onrender.com/listings)
 
 ## Features
 
