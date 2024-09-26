@@ -12,7 +12,12 @@ body{
 /*Navbar*/
 .navbar{
     height: 5rem;
-    background-color: white;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.container-fluid{
+    background-color: #fff;
 }
 
 .navbar-brand{
@@ -39,6 +44,16 @@ body{
 #nav-container{
     justify-content:space-between;
 }
+#filters{
+    width: 80%;
+    overflow: hidden;
+    overflow-x: auto;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+#filters::-webkit-scrollbar {
+    display: none;
+}
+
 #filters a{
     color:#000;
     text-decoration: none;
@@ -56,7 +71,8 @@ body{
     opacity: 1;
     cursor: pointer;
 }
-.tax-toggle{    
+.tax-toggle{  
+    margin: 0 0.5rem;  
     border-radius: 5px;
     padding:0.5rem 0.8rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -77,7 +93,7 @@ body{
    
 }
 
-.f-info-links{
+.f-info-links, .f-info-socials{
     display: flex;
 }
 
@@ -177,12 +193,15 @@ body{
 /* Search */
 .search{
     display: flex;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 1rem;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .search .circle{
+    height: 35px;
+    width: 35px;
+    text-align: center;
     background-color:#fe424d ;
     color:#fff;
     border:none;
@@ -199,4 +218,26 @@ body{
 .d-flex .search-inp{
     border-radius: 50px;
     padding: 0 2rem;
+}
+
+/* Meadia Querery */
+@media screen and (max-width: 780px) {
+    .search .d-flex{
+       width: 100%;
+    }
+    
+    #nav-container .tax-toggle .form-check .form-check-label{
+        display: none;
+    }
+
+    .f-info{
+        flex-wrap: wrap;
+        padding: 0.5rem;
+        
+    }
+    .f-info-links, .f-info-socials{
+        width: 100%;
+        justify-content: center;
+    }
+    
 }
