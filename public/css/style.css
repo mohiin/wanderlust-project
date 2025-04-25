@@ -218,6 +218,12 @@ body{
 .d-flex .search-inp{
     border-radius: 50px;
     padding: 0 2rem;
+    border: none;   
+}
+
+.d-flex .search-inp:focus{
+    outline: none;
+    box-shadow: none;
 }
 
 /* Meadia Querery */
